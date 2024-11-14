@@ -7,3 +7,5 @@ let () =
   Nineteen.run ();
   print_endline "twenty problem";
   Twenty.run ();
+  print_endline "twenty one problem";
+  Twenty_one.run ();
