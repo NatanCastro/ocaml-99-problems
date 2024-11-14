@@ -9,3 +9,5 @@ let () =
   Twenty.run ();
   print_endline "twenty one problem";
   Twenty_one.run ();
+  print_endline "twenty two problem";
+  Twenty_two.run ();
