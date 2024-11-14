@@ -13,3 +13,5 @@ let () =
   Twenty_two.run ();
   print_endline "twenty three problem";
   Twenty_three.run ();
+  print_endline "twenty four problem";
+  Twenty_four.run ();
