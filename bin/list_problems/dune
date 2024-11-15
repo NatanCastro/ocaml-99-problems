@@ -1,0 +1,12 @@
+(library
+ (name list_problems)
+ (modules
+  eighteen
+  nineteen
+  seventeen
+  twenty
+  twenty_five
+  twenty_four
+  twenty_one
+  twenty_three
+  twenty_two))

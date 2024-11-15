@@ -1,4 +1,5 @@
 (executable
  (public_name nine_nine_problems)
  (name main)
- (libraries nine_nine_problems))
+ (modules main)
+ (libraries nine_nine_problems list_problems))
