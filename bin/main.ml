@@ -19,6 +19,7 @@ let print_problems () =
     "32. Determine the greatest common divisor of two positive integer numbers.";
   print_endline
     "33. Determine whether two positive integer numbers are coprime.";
+  print_endline "34. Euler's totient function";
   print_endline "0. exit";
   print_endline "enter a problem number: ";
   let input = read_line () in
@@ -40,6 +41,7 @@ let run_problem problem =
   | "31" -> Arithmetic_problems.Prime.run ()
   | "32" -> Arithmetic_problems.Gcd.run ()
   | "33" -> Arithmetic_problems.Coprime.run ()
+  | "34" -> Arithmetic_problems.Euler_totient.run ()
   | _ -> print_endline "invalid input"
 
 let () =
