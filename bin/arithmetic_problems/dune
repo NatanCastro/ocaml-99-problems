@@ -1,3 +1,4 @@
 (library
  (name arithmetic_problems)
- (modules prime))
+ (modules prime gcd coprime)
+ (libraries base))
