@@ -15,3 +15,12 @@ let run () =
   let res = gcd x y in
   print_int res;
   print_newline ()
+let rec gcd a b =
+  match b with
+  | 0 -> a
+  | _ ->
+    gcd a (a mod b)
+
+let run () =
+  let common_divisors = [1; 2; 3; 4; 5; 6; 7; 8; 9] in
+  List.iter (fun a -> gcd a 9 |> print_int; print_newline ()) common_divisors;
