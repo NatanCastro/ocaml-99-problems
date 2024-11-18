@@ -1,0 +1,3 @@
+(library
+ (name arithmetic_problems)
+ (modules prime))

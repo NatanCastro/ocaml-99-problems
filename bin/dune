@@ -2,4 +2,4 @@
  (public_name nine_nine_problems)
  (name main)
  (modules main)
- (libraries nine_nine_problems list_problems))
+ (libraries nine_nine_problems list_problems arithmetic_problems))

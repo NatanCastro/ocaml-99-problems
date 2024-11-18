@@ -10,6 +10,8 @@ let () =
   print_endline "23. twenty three problem";
   print_endline "24. twenty four problem";
   print_endline "25. twenty five problem";
+  print_endline "31. thirty one problem";
+  print_endline "input: ";
 
   let input = read_line () in
 
@@ -24,4 +26,5 @@ let () =
     | "23" -> print_endline "twenty three problem"; List_problems.Twenty_three.run ()
     | "24" -> print_endline "twenty four problem"; List_problems.Twenty_four.run ()
     | "25" -> print_endline "twenty five problem"; List_problems.Twenty_five.run ()
+    | "31" -> print_endline "thirty one problem"; Arithmetic_problems.Prime.run ()
     | _ -> print_endline "invalid input";
