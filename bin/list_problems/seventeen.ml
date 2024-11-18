@@ -1,8 +1,3 @@
-(*
-   17. Split a list into two parts; the length of the first part is given. (easy)
-   If the length of the first part is longer than the entire list, then the first part is the list and the second part is empty.
-*)
-
 let split_list l len =
   let rec aux i acc = function
     | [] -> (List.rev acc, [])
@@ -13,11 +8,27 @@ let split_list l len =
 
 let print_list l f = List.iter (fun x -> f x) l
 
+let print_problem_example () =
+  print_endline "split a list into two parts";
+  print_endline "the length of the first part is given";
+  print_endline "example:";
+  print_endline "list = [1; 2; 3; 4; 5; 6; 7; 8; 9; 10]";
+  print_endline "length = 8";
+  print_endline "first part = [1; 2; 3; 4; 5; 6; 7; 8]";
+  print_endline "second part = [9; 10]";
+  print_newline ()
+
 let run () =
+  print_problem_example ();
+  print_newline ();
   let l = [ 1; 2; 3; 4; 5; 6; 7; 8; 9; 10 ] in
-  let count = 8 in
-  let left, right = split_list l count in
-  print_list left (fun x -> Printf.printf "%d " x);
-  print_string "\n";
-  print_list right (fun x -> Printf.printf "%d " x);
-  print_string "\n"
+  let len = 8 in
+  let first, second = split_list l len in
+  print_list first (fun x ->
+      print_int x;
+      print_string "; ");
+  print_newline ();
+  print_list second (fun x ->
+      print_int x;
+      print_string "; ");
+  print_newline ()

@@ -20,8 +20,14 @@ let is_prime x =
   in
   aux (float_of_int x) (float_of_int x |> (fun x -> x /. 2.) |> Float.round)
 
+let pring_problem_example () =
+  print_string "Example:\n";
+  print_string "is_prime 10\n";
+  print_string "10 is not prime\n";
+  print_newline ()
+
 let run () =
-  print_endline "prime problem";
-  let number = 10 in
-  if is_prime number then print_endline "is prime"
-  else print_endline "is not prime"
+  pring_problem_example ();
+  let res = is_prime 10 in
+  print_string "10 is ";
+  if res then print_string "prime\n" else print_string "not prime\n"

@@ -10,13 +10,26 @@ let rotate l n =
 
 let print_list f l = List.iter (fun x -> f x) l
 
-let run () =
-  let l = [ 1; 2; 3; 4; 5; 6; 7; 8; 9; 10 ] in
-  let n = 3 in
-  rotate l n |> print_list (fun x -> Printf.printf "%d " x);
-  print_string "\n";
+let print_problem_example () =
+  print_string "Example:\n";
+  print_string "rotate [1; 2; 3; 4; 5; 6; 7; 8; 9; 10] 3\n";
+  print_string "  [10; 1; 2; 3; 4; 5; 6; 7; 8; 9]\n";
+  print_string "rotate [1; 2; 3; 4; 5; 6; 7; 8; 9; 10] -3\n";
+  print_string "  [9; 10; 1; 2; 3; 4; 5; 6; 7; 8]\n";
+  print_newline ()
 
+let run () =
+  print_problem_example ();
   let l = [ 1; 2; 3; 4; 5; 6; 7; 8; 9; 10 ] in
-  let n = -3 in
-  rotate l n |> print_list (fun x -> Printf.printf "%d " x);
-  print_string "\n"
+  print_list
+    (fun x ->
+      print_int x;
+      print_string " ")
+    l;
+  print_newline ();
+  print_list
+    (fun x ->
+      print_int x;
+      print_string " ")
+    (rotate l 3);
+  print_newline ()

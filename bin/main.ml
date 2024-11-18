@@ -16,7 +16,9 @@ let print_problems () =
   print_endline "2 - Arithmetic problems";
   print_endline "31. Determine whether a given integer number is prime.";
   print_endline
-    "32. Determine whether two positive integer numbers are coprime.";
+    "32. Determine the greatest common divisor of two positive integer numbers.";
+  print_endline
+    "33. Determine whether two positive integer numbers are coprime.";
   print_endline "0. exit";
   print_endline "enter a problem number: ";
   let input = read_line () in
@@ -36,7 +38,8 @@ let run_problem problem =
   | "24" -> List_problems.Twenty_four.run ()
   | "25" -> List_problems.Twenty_five.run ()
   | "31" -> Arithmetic_problems.Prime.run ()
-  | "32" -> Arithmetic_problems.Coprime.run ()
+  | "32" -> Arithmetic_problems.Gcd.run ()
+  | "33" -> Arithmetic_problems.Coprime.run ()
   | _ -> print_endline "invalid input"
 
 let () =

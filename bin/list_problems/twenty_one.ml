@@ -14,7 +14,16 @@ let insert_at item pos l =
 
 let print_list f l = List.iter (fun x -> f x) l
 
+let print_problem_example () =
+  print_string "Example:\n";
+  print_string "insert_at 1 7 [1; 2; 3; 4; 5; 6; 7; 8; 9; 10]\n";
+  print_string "  [1; 2; 3; 4; 5; 6; 7; 8; 1; 9; 10]\n";
+  print_string "insert_at 1 (-16) [1; 2; 3; 4; 5; 6; 7; 8; 9; 10]\n";
+  print_string "  [1; 2; 3; 1; 4; 5; 6; 7; 8; 9; 10]\n";
+  print_newline ()
+
 let run () =
+  print_problem_example ();
   let l = insert_at 1 7 [ 1; 2; 3; 4; 5; 6; 7; 8; 9; 10 ] in
   print_list (fun x -> Printf.printf "%d " x) l;
   print_newline ();

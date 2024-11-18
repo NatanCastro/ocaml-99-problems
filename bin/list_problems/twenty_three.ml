@@ -1,11 +1,3 @@
-(**
-   23. Extract a given number of randomly selected elements from a list. (medium)
-      The selected items shall be returned in a list. We use the Random module but do not initialize it with Random.self_init for reproducibility.
-
-    # rand_select ["a";"b";"c";"d";"e";"f";"g";"h"] 3;;
-    - : string list = ["g"; "d"; "a"]
-  *)
-
 let rand_select list n =
   Random.self_init ();
   let rec extract acc n = function
@@ -24,9 +16,17 @@ let rand_select list n =
 
 let print_list f l = List.iter (fun x -> f x) l
 
+let print_problem_example () =
+  print_string "Example:\n";
+  print_string
+    "rand_select [\"a\"; \"b\"; \"c\"; \"d\"; \"e\"; \"f\"; \"g\"; \"h\"] 4\n";
+  print_string "  [\"a\"; \"b\"; \"c\"; \"d\"]\n";
+  print_newline ()
+
 let run () =
-  let n = 4 in
-  let res = rand_select [ "a"; "b"; "c"; "d"; "e"; "f"; "g"; "h" ] n in
+  print_problem_example ();
+  let l = [ "a"; "b"; "c"; "d"; "e"; "f"; "g"; "h" ] in
+  let res = rand_select l 4 in
   print_list
     (fun x ->
       print_string x;

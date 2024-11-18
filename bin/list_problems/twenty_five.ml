@@ -16,9 +16,16 @@ let permutation l =
 
 let print_list f l = List.iter (fun x -> f x) l
 
+let print_problem_example () =
+  print_string "Example:\n";
+  print_string "permutation [1; 2; 3; 4; 5; 6; 7; 8; 9; 10]\n";
+  print_string "  [3; 4; 1; 10; 5; 9; 2; 7; 6; 8]\n";
+  print_newline ()
+
 let run () =
-  let n = 5 in
-  let res = permutation (Twenty_two.range 1 n) in
+  print_problem_example ();
+  let l = [ 1; 2; 3; 4; 5; 6; 7; 8; 9; 10 ] in
+  let res = permutation l in
   print_list
     (fun x ->
       print_int x;
