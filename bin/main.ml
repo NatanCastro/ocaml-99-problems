@@ -1,50 +1,44 @@
-let () =
+let print_problems () =
   print_endline "select a problem";
+  print_endline "1 - List problems";
+  print_endline
+    "17. Split a list into two parts; the length of the first part is given";
+  print_endline "18. Extract a slice from a list.";
+  print_endline "19. Rotate a list N places to the left.";
+  print_endline "20. Remove the K'th element from a list.";
+  print_endline "21. Insert an element at a given position into a list.";
+  print_endline
+    "22. Create a list containing all integers within a given range.";
+  print_endline
+    "23. Extract a given number of randomly selected elements from a list.";
+  print_endline "24. Lotto: Draw N different random numbers from the set 1..M.";
+  print_endline "25. Generate a random permutation of the elements of a list.";
+  print_endline "2 - Arithmetic problems";
+  print_endline "31. Determine whether a given integer number is prime.";
+  print_endline
+    "32. Determine whether two positive integer numbers are coprime.";
   print_endline "0. exit";
-  print_endline "17. seventeen problem";
-  print_endline "18. eighteen problem";
-  print_endline "19. nineteen problem";
-  print_endline "20. twenty problem";
-  print_endline "21. twenty one problem";
-  print_endline "22. twenty two problem";
-  print_endline "23. twenty three problem";
-  print_endline "24. twenty four problem";
-  print_endline "25. twenty five problem";
-  print_endline "31. thirty one problem";
-  print_endline "input: ";
-
+  print_endline "enter a problem number: ";
   let input = read_line () in
+  print_newline ();
+  input
 
-  match input with
+let run_problem problem =
+  match problem with
   | "0" -> exit 0
-  | "17" ->
-      print_endline "seventeen problem";
-      List_problems.Seventeen.run ()
-  | "18" ->
-      print_endline "eighteen problem";
-      List_problems.Eighteen.run ()
-  | "19" ->
-      print_endline "nineteen problem";
-      List_problems.Nineteen.run ()
-  | "20" ->
-      print_endline "twenty problem";
-      List_problems.Twenty.run ()
-  | "21" ->
-      print_endline "twenty one problem";
-      List_problems.Twenty_one.run ()
-  | "22" ->
-      print_endline "twenty two problem";
-      List_problems.Twenty_two.run ()
-  | "23" ->
-      print_endline "twenty three problem";
-      List_problems.Twenty_three.run ()
-  | "24" ->
-      print_endline "twenty four problem";
-      List_problems.Twenty_four.run ()
-  | "25" ->
-      print_endline "twenty five problem";
-      List_problems.Twenty_five.run ()
-  | "31" ->
-      print_endline "thirty one problem";
-      Arithmetic_problems.Prime.run ()
+  | "17" -> List_problems.Seventeen.run ()
+  | "18" -> List_problems.Eighteen.run ()
+  | "19" -> List_problems.Nineteen.run ()
+  | "20" -> List_problems.Twenty.run ()
+  | "21" -> List_problems.Twenty_one.run ()
+  | "22" -> List_problems.Twenty_two.run ()
+  | "23" -> List_problems.Twenty_three.run ()
+  | "24" -> List_problems.Twenty_four.run ()
+  | "25" -> List_problems.Twenty_five.run ()
+  | "31" -> Arithmetic_problems.Prime.run ()
+  | "32" -> Arithmetic_problems.Coprime.run ()
   | _ -> print_endline "invalid input"
+
+let () =
+  let input = print_problems () in
+  run_problem input
