@@ -1,4 +1,4 @@
 (library
  (name arithmetic_problems)
- (modules prime gcd coprime euler_totient)
+ (modules prime gcd coprime euler_totient prime_factors)
  (libraries base))
